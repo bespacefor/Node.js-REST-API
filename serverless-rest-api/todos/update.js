@@ -16,7 +16,7 @@ module.exports.update = (event, context, callback) => {
     const params = {
         TableName: 'todos',
         Item: {
-            id: event.Parameters.id,
+            id: event.pathParameters.id,
             text: data.text,
             checked: data.checked,
             updatedAt: timestamp
